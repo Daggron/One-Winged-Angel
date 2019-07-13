@@ -1,7 +1,6 @@
 # The-Magnet-ERP
 An erp created for the magnet public school
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 <h1>Description of the project</h1>
@@ -59,7 +58,9 @@ An erp created for the magnet public school
 		<a href="https://twilio.com/" target="_blank" class="btn btn-success"><span class="text-white">Twilio</span></a>
 	</li>
 	<li>
-		<a href="https://www.nodemailer.com/" target="_blank" class="btn btn-success"><span class="text-white">Node-Mailer</span></a>
+		<div class="btn btn-success">
+		<a href="https://www.nodemailer.com/" target="_blank" ><span class="text-white">Node-Mailer</span></a>
+		</div>
 	</li>
 
 
