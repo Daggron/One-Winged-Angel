@@ -66,3 +66,12 @@ An erp created for the magnet public school
 
 
 </ul>
+
+<p>
+	This project is made by <a href="https://github.com/Daggron">Abhay Sharma</a> ,<a href="https://github.com/Daggron"> Mansi Gulati </a> ,<a href="https://github.com/Daggron"> Abhay Singh  </a>, <a href="https://github.com/Daggron">Abhinav Shroff </a> , <a href="https://github.com/Daggron">Abhinav Sharma </a>
+</p>
+
+<p>
+	This project is licensed under apache license 2.0  and copyright &copy; protected under the section 17 of the constitution and legal law suits.
+	All rights belong to Abhay sharma
+</p>
