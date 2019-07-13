@@ -1,0 +1,30 @@
+{
+  "name": "the-magnet-erp",
+  "version": "1.0.0",
+  "description": "\"An erp made for the better management of a school\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "app.js"
+  },
+  "keywords": [
+    "\"The",
+    "Magnet",
+    "Public",
+    "school",
+    "Erp\""
+  ],
+  "author": "Daggron",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.6.4",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0"
+  }
+}
