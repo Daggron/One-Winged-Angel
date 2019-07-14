@@ -9,6 +9,45 @@ An erp created for the magnet public school
 </p>
 
 
+
+
+<h1>
+	Code of Conduct
+</h1>
+<p>
+	The rules and regulation we are going to follow for this project
+</p>
+<p>
+	This is a community project so please take this project seriously as their is only one month deadline for this project the technology we are going to use in this project is very simple no big mountains to conqure and if you get stuck reach out to me with any issue. Please add meaningful changes to this repo use a good text-editor like vscode or webstorm or any other you want.
+
+	Atleast test the chages you are making in every possible way so they don't cause server to crash and if you find any bug please report it on the gitter channel  
+
+	[![Gitter](https://badges.gitter.im/one-winged-angels/community.svg)](https://gitter.im/one-winged-angels/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+	Don't send a pr directly and start working on your changes directly
+	First <strong>git pull</strong> the project and then add your changes to the updated Files
+	and then commit the changes and create a pull request with the berief notes about your changes
+
+
+	Please add comments to the code so other can read it.
+
+	And please write some meaningful  variable names every name should be relevant to the method or data which is to be contained in the varibale
+
+
+	<Strong> Please maintain the hygenity and structure  of the code </Strong>
+	
+	<ul>
+		<li>The Routes should be contained in the routes folder</li>
+		<li>The database models should be contianed inside the models folder</li>
+		<li>Images and other static files like css and vanilla-javascript should be inside public folder with the proper subfolders i.e js should be in js folder images should be in images folder and so others. </li>
+
+		<li>
+		The template engine we are using is ejs so it should be in views folder and reuseable  templates should be inside reuseable sub folder
+		</li>
+	</ul>
+
+</p>
+
 <h1>
 	Funcitonality we want to achive
 </h1>
