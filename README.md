@@ -1,4 +1,4 @@
-# The-Magnet-ERP
+# One-Winged-Angel
 An erp created for the magnet public school
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
