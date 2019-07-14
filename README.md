@@ -45,7 +45,8 @@ An erp created for the magnet public school
 
 <h1>
 	Gitter Channel
-	[![Gitter](https://badges.gitter.im/one-winged-angels/community.svg)](https://gitter.im/one-winged-angels/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) 
+	<a href="https://gitter.im/one-winged-angels/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+	Click Here</a>
 </h1>
 
 <h1>
