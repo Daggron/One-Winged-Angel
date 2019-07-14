@@ -23,7 +23,7 @@ An erp created for the magnet public school
 </p>
 
 <p>
-	Atleast test the chages you are making in every possible way so they don't cause server to crash and if you find any bug please report it on the gitter channel [![Gitter](https://badges.gitter.im/one-winged-angels/community.svg)](https://gitter.im/one-winged-angels/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) 
+	Atleast test the chages you are making in every possible way so they don't cause server to crash and if you find any bug please report it on the gitter channel 
 	Don't send a pr directly and start working on your changes directly
 	First <strong>git pull</strong> the project and then add your changes to the updated Files
 	and then commit the changes and create a pull request with the berief notes about your changes
@@ -42,6 +42,11 @@ An erp created for the magnet public school
 
 <Strong> Please always maintain the 4 spaces white space in the code</Strong>
 </p>
+
+<h1>
+	Gitter Channel
+	[![Gitter](https://badges.gitter.im/one-winged-angels/community.svg)](https://gitter.im/one-winged-angels/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) 
+</h1>
 
 <h1>
 	Funcitonality we want to achive
