@@ -1,0 +1,11 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 100vw;
+    height: auto;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}

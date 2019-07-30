@@ -4,7 +4,7 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const index = require('./routes/index');
 
-mongoose.connect("mongodb://127.0.0.1:27017/magnet",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://test:test@cluster0-r8vw1.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 
 const db = mongoose.connection;
 
@@ -14,10 +14,10 @@ db.on("error",()=>{
 
 db.once("open",()=>{
     console.log("Database connected successfully");
-})
+});
 
 // Making a use of express static routing to load css and js files to the server and serve to browser
-app.use(express.static("/public"));
+app.use(express.static(__dirname+'/public'));
 
 // using the bodyparser to use the data send to srever from the body 
 app.use(bodyparser.urlencoded({extended:false}));
@@ -26,9 +26,11 @@ app.use(bodyparser.urlencoded({extended:false}));
 app.set("template engine","ejs");
 
 
-app.get('/',index);
+app.use('/',index);
 
-const port = process.env.Port || 3000
+const port = process.env.Port || 3300;
+
+// Listening the application port on 3000 for development server
 
 app.listen(port,()=>{
     console.log(`Server Started on the port ${port}`);
