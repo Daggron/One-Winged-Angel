@@ -3,6 +3,7 @@ const app = express();
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const index = require('./routes/index');
+const session = require('express-session');
 
 mongoose.connect("mongodb+srv://test:test@cluster0-r8vw1.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 
@@ -25,8 +26,25 @@ app.use(bodyparser.urlencoded({extended:false}));
 //Setting the template engine to ejs
 app.set("template engine","ejs");
 
+app.use(session({
+    secret:'I am Ironman keyboard cat ',
+    resave:true,
+    saveUninitialized:false,
+    cookie:{
+        secure:true
+    }
+}));
+
+
+app.get('*',(req,res,next)=>{
+    res.locals.user = req.user || null;
+    console.log(res.locals.user);
+    next();
+});
+
 
 app.use('/',index);
+
 
 const port = process.env.Port || 3300;
 

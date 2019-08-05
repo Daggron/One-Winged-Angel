@@ -2,6 +2,18 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const session = require('express-session');
+
+router.use(session({
+    secret:'I am Ironman keyboard cat ',
+    resave:true,
+    saveUninitialized:false,
+    cookie:{
+        secure:true
+    }
+}));
+
+
 
 router.get('/',(req,res)=>{
     res.render("Index.ejs",{title:"The Magnet"})
@@ -10,6 +22,7 @@ router.get('/',(req,res)=>{
 router.get('/user/createuser',(req,res)=>{
    res.render('create.ejs');
 });
+
 router.post('/user/createuser',(req,res)=>{
     let query = {email:req.body.email};
     User.findOne(query,(err,found)=>{
@@ -43,4 +56,39 @@ router.post('/user/createuser',(req,res)=>{
     });
 
 });
+
+router.get('/user/login',(req,res)=>{
+    res.render("login.ejs");
+});
+router.post('/user/login',(req,res)=>{
+   let query = {email:req.body.email};
+   User.findOne(query,(err,found)=>{
+       if(!found){
+           // req.flash("User not found");
+           res.redirect('/user/createuser');
+       }
+       else if(found){
+           let check = bcrypt.compare(req.body.password,found.password,(err, result)=>{
+               if(err){
+                   console.log(err);
+               }
+               else if(result === true){
+                   req.session.user = found;
+                   console.log(req.session.user);
+
+                   res.send(`Hello ${req.session.user.name}`);
+
+               }
+               else{
+                   res.send("Wrong password");
+                   res.redirect('/user/login');
+                   return null;
+               }
+           });
+       }
+   })
+});
+
+
+
 module.exports=router;
