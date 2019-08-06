@@ -3,20 +3,31 @@ const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
+const flash = require('connect-flash');
 
-router.use(session({
-    secret:'I am Ironman keyboard cat ',
-    resave:true,
-    saveUninitialized:false,
-    cookie:{
-        secure:true
-    }
-}));
-
+// router.use(session({
+//     secret:'I am Ironman keyboard cat ',
+//     resave:true,
+//     saveUninitialized:true,
+// }));
+//
+// router.get('*',(req,res,next)=>{
+//     res.locals.user = req.session.user || null;
+//     console.log(res.locals.user);
+//     next();
+// });
+//
+//
 
 
 router.get('/',(req,res)=>{
-    res.render("Index.ejs",{title:"The Magnet"})
+    if(req.session.user) {
+
+        res.render("Index.ejs", {title: "The Magnet",user:req.session.user});
+    }
+    else{
+        res.redirect('/user/login');
+    }
 });
 
 router.get('/user/createuser',(req,res)=>{
@@ -29,6 +40,7 @@ router.post('/user/createuser',(req,res)=>{
         if(err) throw err;
         else{
             if(found){
+                req.flash("info","User already exists");
                 res.redirect('/user/createuser');
             }
             else {
@@ -65,6 +77,7 @@ router.post('/user/login',(req,res)=>{
    User.findOne(query,(err,found)=>{
        if(!found){
            // req.flash("User not found");
+           req.flash("Error","Please create a user");
            res.redirect('/user/createuser');
        }
        else if(found){
@@ -74,9 +87,9 @@ router.post('/user/login',(req,res)=>{
                }
                else if(result === true){
                    req.session.user = found;
-                   console.log(req.session.user);
-
-                   res.send(`Hello ${req.session.user.name}`);
+                   res.locals.user = found;
+                   console.log(res.locals.user);
+                   res.redirect('/');
 
                }
                else{
@@ -88,6 +101,7 @@ router.post('/user/login',(req,res)=>{
        }
    })
 });
+
 
 
 

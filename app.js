@@ -4,6 +4,10 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const index = require('./routes/index');
 const session = require('express-session');
+const flash = require('connect-flash');
+const cookieParser = require('cookieparser');
+const expressValidator = require('express-validator');
+const user = require('./models/user');
 
 mongoose.connect("mongodb+srv://test:test@cluster0-r8vw1.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 
@@ -24,16 +28,21 @@ app.use(express.static(__dirname+'/public'));
 app.use(bodyparser.urlencoded({extended:false}));
 
 //Setting the template engine to ejs
-app.set("template engine","ejs");
+app.set("view engine","ejs");
 
 app.use(session({
     secret:'I am Ironman keyboard cat ',
     resave:true,
-    saveUninitialized:false,
-    cookie:{
-        secure:true
-    }
+    saveUninitialized:true,
+
 }));
+
+app.use(require('connect-flash')());
+
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
 
 
 app.get('*',(req,res,next)=>{
