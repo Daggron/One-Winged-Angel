@@ -26,6 +26,18 @@ section{
     overflow: hidden;
 }
 
+.container-page{
+    .heading{
+        width: 100vw;
+        text-align: center;
+        font-size: $heading-size;
+        margin-top: 5%;
+        h1{
+            font-family: $heading-font;
+            color: #9b9191;
+        }
+    }
+}
 
 #main{
     background: $background!important;
@@ -442,6 +454,7 @@ section{
         width: 100vw;
         height: 300px;
         z-index: 0;
+        background-size: cover;
     }
 
     
@@ -556,11 +569,11 @@ section{
 }
                         .subtitle{
                             opacity: 1;
-                            transform: translateY(-130px)                        ;
-                            -webkit-transform: translateY(-130px)                        ;
-                            -moz-transform: translateY(-130px)                        ;
-                            -ms-transform: translateY(-130px)                        ;
-                            -o-transform: translateY(-130px)                        ;
+                            transform: translateY(-120px)                        ;
+                            -webkit-transform: translateY(-120px)                        ;
+                            -moz-transform: translateY(-120px)                        ;
+                            -ms-transform: translateY(-120px)                        ;
+                            -o-transform: translateY(-120px)                        ;
                             transition: 1s;
                             -webkit-transition: 1s;
                             -moz-transition: 1s;
@@ -579,6 +592,7 @@ section{
         content: '';
         display: block;
         background: url(/images/back.png);
+        background-size: cover;
         height: 200px;
         width: 100vw;
         transform: rotate(180deg)    ;
@@ -594,7 +608,8 @@ section{
 
 
 .faculty{
-    margin-top: 20%;
+    margin-top: 10%;
+    background: white;
     .container-page{
         .heading{
             text-align: center;
@@ -607,6 +622,93 @@ section{
             }
             p{
                 font-size: 1.2rem;
+            }
+        }
+    }
+
+ 
+}
+
+.master-box{
+    width: 100vw;
+    height: auto;
+    .cards-faculty{
+        width: 80vw;
+        margin: auto;
+        height: auto;
+        overflow: hidden;
+        .card{
+            width: 25%;
+            float: left;
+            height: auto;
+            overflow: hidden;
+            background: white;
+            margin: 3%;
+            box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.5);
+            .top{
+                height: 250px;
+                width: auto;
+                .bg{
+                    background: #8166cd;
+                    height: 100px;
+                    width: 100%;
+
+                    
+                }
+                img{
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+                    display: flex;
+                    align-self: center;
+                    margin: auto;
+                    border: 2px solid #8166cd;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%                    ;
+                    -moz-border-radius: 50%                    ;
+                    -ms-border-radius: 50%                    ;
+                    -o-border-radius: 50%                    ;
+                    filter: grayscale(50%);
+                    -webkit-filter: grayscale(50%);
+                    &:hover{
+                        filter: none                        ;
+                        -webkit-filter: none                        ;
+                        transition: 1s;
+                        -webkit-transition: 1s;
+                        -moz-transition: 1s;
+                        -ms-transition: 1s;
+                        -o-transition: 1s;
+}
+}
+
+            }
+
+            .mid{
+                h1{
+                    font-family: $heading-font;
+                    color: #9b9191;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            .bottom{
+                ul{
+                    margin: auto;
+                    li{
+                        padding: 5%;
+                         margin: 5%;
+                        display: inline-block;
+                        a{
+                            color: #8166cd;
+                            i{
+                            padding: 5%;
+                            margin: 5%;
+
+                            }
+                        }
+                    }
+                }
             }
         }
     }

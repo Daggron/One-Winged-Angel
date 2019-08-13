@@ -18,6 +18,18 @@ section {
   overflow: hidden;
 }
 
+.container-page .heading {
+  width: 100vw;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 5%;
+}
+
+.container-page .heading h1 {
+  font-family: "Merienda", cursive;
+  color: #9b9191;
+}
+
 #main {
   background: #220829 !important;
   width: 100vw;
@@ -528,6 +540,7 @@ section {
   width: 100vw;
   height: 300px;
   z-index: 0;
+  background-size: cover;
 }
 
 .gallery .heading {
@@ -651,11 +664,11 @@ section {
 
 .gallery .gallery-box .inbox .image-tile:hover .subtitle {
   opacity: 1;
-  transform: translateY(-130px);
-  -webkit-transform: translateY(-130px);
-  -moz-transform: translateY(-130px);
-  -ms-transform: translateY(-130px);
-  -o-transform: translateY(-130px);
+  transform: translateY(-120px);
+  -webkit-transform: translateY(-120px);
+  -moz-transform: translateY(-120px);
+  -ms-transform: translateY(-120px);
+  -o-transform: translateY(-120px);
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -667,6 +680,7 @@ section {
   content: '';
   display: block;
   background: url(/images/back.png);
+  background-size: cover;
   height: 200px;
   width: 100vw;
   transform: rotate(180deg);
@@ -677,7 +691,8 @@ section {
 }
 
 .faculty {
-  margin-top: 20%;
+  margin-top: 10%;
+  background: white;
 }
 
 .faculty .container-page .heading {
@@ -694,5 +709,95 @@ section {
 
 .faculty .container-page .heading p {
   font-size: 1.2rem;
+}
+
+.master-box {
+  width: 100vw;
+  height: auto;
+}
+
+.master-box .cards-faculty {
+  width: 80vw;
+  margin: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.master-box .cards-faculty .card {
+  width: 25%;
+  float: left;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  margin: 3%;
+  -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.master-box .cards-faculty .card .top {
+  height: 250px;
+  width: auto;
+}
+
+.master-box .cards-faculty .card .top .bg {
+  background: #8166cd;
+  height: 100px;
+  width: 100%;
+}
+
+.master-box .cards-faculty .card .top img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: auto;
+  border: 2px solid #8166cd;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+}
+
+.master-box .cards-faculty .card .top img:hover {
+  filter: none;
+  -webkit-filter: none;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.master-box .cards-faculty .card .mid h1 {
+  font-family: "Merienda", cursive;
+  color: #9b9191;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.master-box .cards-faculty .card .bottom ul {
+  margin: auto;
+}
+
+.master-box .cards-faculty .card .bottom ul li {
+  padding: 5%;
+  margin: 5%;
+  display: inline-block;
+}
+
+.master-box .cards-faculty .card .bottom ul li a {
+  color: #8166cd;
+}
+
+.master-box .cards-faculty .card .bottom ul li a i {
+  padding: 5%;
+  margin: 5%;
 }
 /*# sourceMappingURL=style.css.map */
